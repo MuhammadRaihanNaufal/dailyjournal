@@ -255,7 +255,7 @@ include "koneksi.php";
     <div class="container">
       <h1 class="fw-bold display-4 pb-3 pt-5">About Me</h1>
       <div class="d-sm-flex align-items-center justify-content-center">
-        <div class="p-3">
+        <div class="d-flex justify-content-center p-3">
           <img
             src="img/20240411_095837.jpg"
             class="rounded-circle border shadow"
