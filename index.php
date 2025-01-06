@@ -257,7 +257,7 @@ include "koneksi.php";
       <div class="d-sm-flex align-items-center justify-content-center">
         <div class="p-3">
           <img
-            src="https://st2.depositphotos.com/3369547/8161/v/380/depositphotos_81611512-stock-illustration-web-developer-design.jpg"
+            src="img/20240411_095837.jpg"
             class="rounded-circle border shadow"
             width="300" height="300" />
         </div>
