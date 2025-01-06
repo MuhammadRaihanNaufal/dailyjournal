@@ -138,18 +138,29 @@ include "koneksi.php";
       <h1 class="fw-bold display-4 pb-3 pt-5">Gallery</h1>
       <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="https://lh5.googleusercontent.com/p/AF1QipPygTbv_aahcsF6evnOtQe7sUwDKfhp6R_2r0j5=w675-h390-n-k-no" class="d-block w-100" alt="..." />
-          </div>
-          <div class="carousel-item">
-            <img src="https://lh5.googleusercontent.com/p/AF1QipNCDxS-0MgQ_gG5vHqpD1-E79jQFka7VN5zeVQe=w675-h390-n-k-no" class="d-block w-100" alt="..." />
-          </div>
-          <div class="carousel-item">
-            <img src="https://lh5.googleusercontent.com/p/AF1QipNa3XXAm4mmOH_1B7ptq4o2M3Ugv7tvUXEOoqsk=w675-h390-n-k-no" class="d-block w-100" alt="..." />
-          </div>
-          <div class="carousel-item">
-            <img src="https://lh5.googleusercontent.com/p/AF1QipOcxJk-pqJpBT4pUoPYe2szk_D1tWR0a7LP_BvG=w675-h390-n-k-no" class="d-block w-100" alt="..." />
-          </div>
+          <?php
+          // Query untuk mengambil data dari tabel gallery
+          $sql2 = "SELECT * FROM gallery ORDER BY tanggal DESC";
+          $hasil2 = $conn->query($sql2);
+
+          $active_class = "active"; // Kelas active untuk item pertama
+
+          if ($hasil2->num_rows > 0) {
+            while ($row = $hasil2->fetch_assoc()) {
+              $image_file = $row['gambar']; // Mengambil nama file dari kolom gambar
+              $image_url = "img/" . $image_file; // Gabungkan dengan path folder img
+              echo '
+                        <div class="carousel-item ' . $active_class . '">
+                            <img src="' . $image_url . '" class="d-block w-100" alt="Gallery Image" />
+                        </div>';
+              $active_class = ""; // Hapus kelas active untuk item berikutnya
+            }
+          } else {
+            echo '<div class="carousel-item active">
+                            <p>No images available in the gallery.</p>
+                        </div>';
+          }
+          ?>
         </div>
         <button
           class="carousel-control-prev"
