@@ -22,6 +22,10 @@ include "koneksi.php";
                     <form method="post" action="" enctype="multipart/form-data">
                         <div class="modal-body">
                             <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Judul</label>
+                                <input type="text" class="form-control" name="judul" placeholder="Tuliskan Judul Gallery" required>
+                            </div>
+                            <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Gambar</label>
                                 <input type="file" class="form-control" name="gambar">
                             </div>
@@ -67,6 +71,9 @@ include "upload_foto.php";
 
 //jika tombol simpan diklik
 if (isset($_POST['simpan'])) {
+    $judul = $_POST['judul'];
+    $tanggal = date("Y-m-d H:i:s");
+    $username = $_SESSION['username'];
     $gambar = '';
     $nama_gambar = $_FILES['gambar']['name'];
 
@@ -105,17 +112,20 @@ if (isset($_POST['simpan'])) {
 
         $stmt = $conn->prepare("UPDATE gallery 
                                 SET 
-                                gambar = ?
+                                judul = ?,
+                                gambar = ?,
+                                tanggal = ?,
+                                username = ?
                                 WHERE id = ?");
 
-        $stmt->bind_param("si", $gambar, $id);
+        $stmt->bind_param("ssssi", $judul, $gambar, $tanggal, $username, $id);
         $simpan = $stmt->execute();
     } else {
         //jika tidak ada id, lakukan insert data baru
-        $stmt = $conn->prepare("INSERT INTO gallery (gambar)
-                                VALUES (?)");
+        $stmt = $conn->prepare("INSERT INTO gallery (judul,gambar,tanggal,username)
+                                VALUES (?,?,?,?)");
 
-        $stmt->bind_param("s", $gambar);
+        $stmt->bind_param("ssss", $judul, $gambar, $tanggal, $username);
         $simpan = $stmt->execute();
     }
 

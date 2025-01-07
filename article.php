@@ -117,8 +117,8 @@ if (isset($_POST['simpan'])) {
 
         $stmt = $conn->prepare("UPDATE article 
                                 SET 
-                                judul =?,
-                                isi =?,
+                                judul = ?,
+                                isi = ?,
                                 gambar = ?,
                                 tanggal = ?,
                                 username = ?
