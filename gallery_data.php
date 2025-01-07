@@ -2,8 +2,6 @@
     <thead class="table-dark">
         <tr>
             <th>No</th>
-            <th class="w-25">Judul</th>
-            <th class="w-75">Isi</th>
             <th class="w-25">Gambar</th>
             <th class="w-25">Aksi</th>
         </tr>
@@ -24,12 +22,6 @@
         ?>
             <tr>
                 <td><?= $no++ ?></td>
-                <td>
-                    <strong><?= $row["judul"] ?></strong>
-                    <br>pada : <?= $row["tanggal"] ?>
-                    <br>oleh : <?= $row["username"] ?>
-                </td>
-                <td><?= $row["isi"] ?></td>
                 <td>
                     <?php
                     if ($row["gambar"] != '') {
@@ -55,15 +47,6 @@
                                 </div>
                                 <form method="post" action="" enctype="multipart/form-data">
                                     <div class="modal-body">
-                                        <div class="mb-3">
-                                            <label for="formGroupExampleInput" class="form-label">Judul</label>
-                                            <input type="hidden" name="id" value="<?= $row["id"] ?>">
-                                            <input type="text" class="form-control" name="judul" placeholder="Tuliskan Judul Gallery" value="<?= $row["judul"] ?>" required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="floatingTextarea2">Isi</label>
-                                            <textarea class="form-control" placeholder="Tuliskan Isi Gallery" name="isi" required><?= $row["isi"] ?></textarea>
-                                        </div>
                                         <div class="mb-3">
                                             <label for="formGroupExampleInput2" class="form-label">Ganti Gambar</label>
                                             <input type="file" class="form-control" name="gambar">
@@ -126,9 +109,9 @@
 </table>
 
 <?php
-$sql1 = "SELECT * FROM gallery";
-$hasil1 = $conn->query($sql1);
-$total_records = $hasil1->num_rows;
+$sql2 = "SELECT * FROM gallery ORDER BY tanggal DESC";
+$hasil2 = $conn->query($sql2);
+$total_records = $hasil2->num_rows;
 ?>
 <p>Total gallery : <?php echo $total_records; ?></p>
 <nav class="mb-2">
