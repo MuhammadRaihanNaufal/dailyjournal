@@ -81,7 +81,7 @@ include "koneksi.php";
   <section id="hero" class="text-center p-5 bg-danger-subtle text-sm-start">
     <div class="container">
       <div class="d-sm-flex flex-sm-row-reverse align-items-center">
-        <img src="https://cdn.pixabay.com/photo/2017/05/09/10/59/mount-fuji-2297961_640.jpg" class="img-fluid" width="800" />
+        <img src="img/gunungbromo2.jpg" class="img-fluid" width="500" height="500" />
         <div>
           <h1 class="fw-bold display-4">
             Explore the Beauty of Mountains
@@ -270,7 +270,7 @@ include "koneksi.php";
           <img
             src="img/20240411_095837.jpg"
             class="rounded-circle border shadow"
-            width="300" height="300" />
+            width="300" />
         </div>
         <div class="p-md-5 text-sm-start">
           <h3 class="lead">A11.2023.14914</h3>

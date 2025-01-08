@@ -2,9 +2,9 @@
     <thead class="table-dark">
         <tr>
             <th>No</th>
-            <th class="w-25">Judul</th>
-            <th class="w-25">Gambar</th>
-            <th class="w-25">Aksi</th>
+            <th class="w-25">Tanggal</th>
+            <th class="w-50">Gambar</th>
+            <th class="w-75">Aksi</th>
         </tr>
     </thead>
     <tbody>
@@ -12,7 +12,7 @@
         include "koneksi.php";
 
         $hlm = (isset($_POST['hlm'])) ? $_POST['hlm'] : 1;
-        $limit = 3;
+        $limit = 5;
         $limit_start = ($hlm - 1) * $limit;
         $no = $limit_start + 1;
 
@@ -24,8 +24,7 @@
             <tr>
                 <td><?= $no++ ?></td>
                 <td>
-                    <strong><?= $row["judul"] ?></strong>
-                    <br>pada : <?= $row["tanggal"] ?>
+                    pada : <?= $row["tanggal"] ?>
                     <br>oleh : <?= $row["username"] ?>
                 </td>
                 <td>
@@ -53,11 +52,6 @@
                                 </div>
                                 <form method="post" action="" enctype="multipart/form-data">
                                     <div class="modal-body">
-                                        <div class="mb-3">
-                                            <label for="formGroupExampleInput" class="form-label">Judul</label>
-                                            <input type="hidden" name="id" value="<?= $row["id"] ?>">
-                                            <input type="text" class="form-control" name="judul" placeholder="Tuliskan Judul Gallery" value="<?= $row["judul"] ?>" required>
-                                        </div>
                                         <div class="mb-3">
                                             <label for="formGroupExampleInput2" class="form-label">Ganti Gambar</label>
                                             <input type="file" class="form-control" name="gambar">
