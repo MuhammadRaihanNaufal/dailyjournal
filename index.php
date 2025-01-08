@@ -270,11 +270,11 @@ include "koneksi.php";
           <img
             src="img/20240411_095837.jpg"
             class="rounded-circle border shadow"
-            width="300" />
+            width="300" height="300" />
         </div>
         <div class="p-md-5 text-sm-start">
           <h3 class="lead">A11.2023.14914</h3>
-          <h1 class="fw-bold">Muhammad Raihan Naufal</h1>
+          <h2 class="fw-bold">Muhammad Raihan Naufal</h2>
           Program Studi Teknik Informatika<br />
           <a href="https://dinus.ac.id/" class="fw-bold text-decoration-none text-black">Universitas Dian Nuswantoro</a>
         </div>
