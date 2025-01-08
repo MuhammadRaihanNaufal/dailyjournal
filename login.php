@@ -73,9 +73,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="container mt-5 pt-5">
             <div class="row">
                 <div class="col-12 col-sm-8 col-md-6 m-auto">
-                    <a href="index.php" class="btn btn-secondary rounded-5 text-start m-3">
-                        <i class="bi bi-arrow-left"></i> Kembali
-                    </a>
                     <div class="card border-0 shadow rounded-5">
                         <div class="card-body">
                             <div class="text-center mb-3">
