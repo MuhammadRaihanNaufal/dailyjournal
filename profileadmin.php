@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (!empty($new_password)) {
         // Update password if provided
-        $hashed_password = password_hash($new_password, PASSWORD_DEFAULT); // Securely hash the new password
+        $hashed_password = md5($new_password, PASSWORD_DEFAULT); // Securely hash the new password
         $query = "UPDATE user SET password = ? WHERE username = ?";
         $stmt = $conn->prepare($query);
         $stmt->bind_param("ss", $hashed_password, $_SESSION['username']);
@@ -129,11 +129,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <a class="nav-link fw-bold" href="index.php">Homepage</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-danger fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-danger fw-bold" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             <?= $_SESSION['username'] ?>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="profileadmin.php">Profile Admin</a></li>
+                            <li><a class="dropdown-item" href="profileadmin.php"><?= $_SESSION['username'] ?></a></li>
                             <li><a class="dropdown-item" href="logout.php">Logout</a></li>
                         </ul>
                     </li>
