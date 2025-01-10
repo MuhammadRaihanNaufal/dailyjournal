@@ -144,7 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <!-- nav end -->
     <!-- profile admin begin -->
     <div class="container mt-5">
-        <h2 class="text-center">Profil</h2>
+        <h2 class="fw-normal border-bottom border-danger pb-2">Profil</h2>
         <form method="POST" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="password" class="form-label">Ganti Password</label>

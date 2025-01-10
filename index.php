@@ -268,7 +268,7 @@ include "koneksi.php";
       <div class="d-sm-flex align-items-center justify-content-center">
         <div class="d-flex justify-content-center p-3">
           <img
-            src="img/20240411_095837.jpg"
+            src="img/aku.jpg"
             class="rounded-circle border shadow"
             width="300" height="300" />
         </div>
