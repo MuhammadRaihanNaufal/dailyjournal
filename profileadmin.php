@@ -129,7 +129,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <a class="nav-link fw-bold" href="index.php">Homepage</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-danger fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-danger fw-bold" href="#" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
                             <?= $_SESSION['username'] ?>
                         </a>
                         <ul class="dropdown-menu">
