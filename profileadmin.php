@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (!empty($new_password)) {
         // Update password if provided
-        $hashed_password = md5($new_password, PASSWORD_DEFAULT); // Securely hash the new password
+        $hashed_password = md5($new_password); // Securely hash the new password
         $query = "UPDATE user SET password = ? WHERE username = ?";
         $stmt = $conn->prepare($query);
         $stmt->bind_param("ss", $hashed_password, $_SESSION['username']);
