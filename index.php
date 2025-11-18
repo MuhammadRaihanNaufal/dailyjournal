@@ -192,10 +192,13 @@ include "koneksi.php";
             <div class="card-header bg-danger text-white">SENIN</div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
-                Basis Data Teori<br />08.40 - 10.20 | H.5.7
+                TECHNOPRENEURSHIP<br />08.40 - 10.20 | H.5.6
               </li>
               <li class="list-group-item">
-                Sistem Operasi<br />12.30 - 15.00 | H.4.9
+                SISTEM INFORMASI<br />12.30 - 15.00 | H.4.7
+              </li>
+              <li class="list-group-item">
+                MANAJEMEN JARINGAN<br />15.30 - 18.00 | H.3.8
               </li>
             </ul>
           </div>
@@ -205,10 +208,10 @@ include "koneksi.php";
             <div class="card-header bg-danger text-white">SELASA</div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
-                Pendidikan Kewarganegaraan<br />08.40 - 10.20 | Aula H7
+                MANAJEMEN PROYEK TEKNOLOGI INFORMASI<br />09.30 - 12.00 | H.4.11
               </li>
               <li class="list-group-item">
-                Probabilitas dan Statistik<br />12.30 - 15.00 | H.4.9
+                PENAMBANGAN DATA<br />15.30 - 18.00 | KULINO
               </li>
             </ul>
           </div>
@@ -218,10 +221,10 @@ include "koneksi.php";
             <div class="card-header bg-danger text-white">RABU</div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
-                Basis Data Praktek<br />08.40 - 10.20 | D.3.M
+                KEAMANAN SISTEM DAN SIBER<br />09.30 - 12.00 | H.4.4
               </li>
               <li class="list-group-item">
-                Kriptografi<br />12.30 - 15.00 | H.4.11
+                SISTEM TERDISTRIBUSI<br />15.30 - 18.00 | H.4.12
               </li>
             </ul>
           </div>
@@ -231,10 +234,7 @@ include "koneksi.php";
             <div class="card-header bg-danger text-white">KAMIS</div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
-                Pemrograman Web<br />08.40 - 10.20 | D.2.J
-              </li>
-              <li class="list-group-item">
-                Logika Informatika<br />12.30 - 15.00 | H.4.5
+                KECERDASAN BUATAN<br />15.30 - 18.00 | KULINO
               </li>
             </ul>
           </div>
@@ -244,7 +244,7 @@ include "koneksi.php";
             <div class="card-header bg-danger text-white">JUMAT</div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
-                Rekayasa Perangkat Lunak<br />09.30 - 12.00 | H.4.5
+                FREE
               </li>
             </ul>
           </div>
@@ -268,7 +268,7 @@ include "koneksi.php";
       <div class="d-sm-flex align-items-center justify-content-center">
         <div class="d-flex justify-content-center p-3">
           <img
-            src="img/aku2.jpg"
+            src="img/AIRetouch_20250928_172256571.jpg"
             class="rounded-circle border shadow"
             width="300" height="300" />
         </div>
@@ -289,7 +289,7 @@ include "koneksi.php";
       <a href="https://twitter.com/udinusofficial"><i class="bi bi-twitter h2 p-2"></i></a>
       <a href="https://wa.me/+628562669588"><i class="bi bi-whatsapp h2 p-2"></i></a>
     </div>
-    <div>Muhammad Raihan Naufal &copy; 2024</div>
+    <div>Muhammad Raihan Naufal &copy; 2025</div>
   </footer>
   <!-- footer end -->
 
@@ -405,4 +405,5 @@ include "koneksi.php";
     };
   </script>
 </body>
+
 </html>
