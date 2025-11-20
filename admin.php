@@ -17,7 +17,7 @@ if (!isset($_SESSION['username'])) {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Admin | My Mountain Journal</title>
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/2072/2072317.png" type="image/x-icon">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/9140/9140319.png" type="image/x-icon">
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
@@ -107,4 +107,5 @@ if (!isset($_SESSION['username'])) {
         crossorigin="anonymous">
     </script>
 </body>
+
 </html>
